@@ -83,8 +83,6 @@ public class Clipboard.HistoryWidget : Gtk.Box {
                 hexpand = true,
                 halign = Gtk.Align.FILL,
                 valign = Gtk.Align.CENTER,
-                xalign = 0.0f,
-                yalign = 0.5f,
                 margin_top = 6,
                 margin_bottom = 6,
                 margin_start = 6,
