@@ -1,5 +1,5 @@
 io.github.ellie-commons.wingpanel-indicator-clipboard (1.0.0) jammy; urgency=medium
 
- * Middle click to paste immediately
+ * Add deb package
 
  -- Stella <teamcons.carrd.co>  Sun, 12 Oct 2025 14:55:00 +0100
