@@ -2,15 +2,15 @@
 <div align="center">
   <h1 align="center">Clipboard indicator</h1>
   <h3 align="center">Simply display clipboard content in the elementary OS top bar</h3>
+    <a href="https://elementary.io">
+        <img src="https://ellie-commons.github.io/community-badge.svg" alt="Made for elementary OS">
+    </a>
 </div>
 
 <div align="center">
     <span align="center">
         <img class="center" src="data/screenshot.png" alt="Clipboard indicator">
     </span>
-    <a href="https://elementary.io">
-        <img src="https://ellie-commons.github.io/community-badge.svg" alt="Made for elementary OS">
-    </a>
 </div>
 </br>
 
