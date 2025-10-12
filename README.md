@@ -1,22 +1,45 @@
-# Clipboard History Indicator
 
-<!--![Screenshot](data/screenshot.png?raw=true)-->
+<div align="center">
+  <h1 align="center">Clipboard indicator</h1>
+  <h3 align="center">Simply display clipboard content in the elementary OS top bar</h3>
+</div>
 
-## Building and Installation
+<div align="center">
+    <span align="center">
+        <img class="center" src="data/screenshot.png" alt="Clipboard indicator">
+    </span>
+</div>
+</br>
 
-You'll need the following dependencies:
+  <a href="https://elementary.io">
+    <img src="https://ellie-commons.github.io/community-badge.svg" alt="Made for elementary OS">
+  </a>
 
-* meson
-* libgranite-dev
-* libwingpanel-dev
-* valac
+## 🛣️ Roadmap
+
+Install the deb file in release to install
+
+
+## 🏗️ Building
+
+Install dependencies with:
+
+```bash
+sudo apt install libglib2.0-dev libgranite-dev libwingpanel-dev valac meson
+```
 
 Run `meson` to configure the build environment and then `ninja` to build
 
-    meson build --prefix=/usr
-    cd build
-    ninja
+```bash
+meson build --prefix=/usr
+cd build
+ninja
+```
 
-To install, use `ninja install`
+To install
 
-    sudo ninja install
+```bash
+sudo ninja install
+```
+
+To uninstall, same but "uninstall"
