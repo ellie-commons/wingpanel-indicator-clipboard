@@ -8,12 +8,12 @@
     <span align="center">
         <img class="center" src="data/screenshot.png" alt="Clipboard indicator">
     </span>
+    <a href="https://elementary.io">
+        <img src="https://ellie-commons.github.io/community-badge.svg" alt="Made for elementary OS">
+    </a>
 </div>
 </br>
 
-  <a href="https://elementary.io">
-    <img src="https://ellie-commons.github.io/community-badge.svg" alt="Made for elementary OS">
-  </a>
 
 ## 🛣️ Roadmap
 
