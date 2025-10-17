@@ -4,17 +4,25 @@
  */
 
 public class Clipboard.Indicator : Wingpanel.Indicator {
+    private static GLib.Settings settings;
     private Gtk.Image panel_icon;
     private HistoryWidget history_widget;
 
     public Wingpanel.IndicatorManager.ServerType server_type { get; construct set; }
 
     public Indicator (Wingpanel.IndicatorManager.ServerType indicator_server_type) {
-        GLib.Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
-        GLib.Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
-
         Object (code_name: "clipboard",
                 server_type: indicator_server_type);
+    }
+
+    construct {
+        Intl.setlocale (LocaleCategory.ALL, "");
+        Intl.bindtextdomain (GETTEXT_PACKAGE, LOCALEDIR);
+        Intl.bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+        Intl.textdomain (GETTEXT_PACKAGE);
+
+        settings = new GLib.Settings ("io.github.ellie_commons.indicator-clipboard");
+        settings.bind ("visible", this, "visible", GLib.SettingsBindFlags.DEFAULT);
     }
 
     public override Gtk.Widget get_display_widget () {
@@ -52,8 +60,6 @@ public class Clipboard.Indicator : Wingpanel.Indicator {
 
     public override void closed () {
     }
-
-
 }
 
 public Wingpanel.Indicator? get_indicator (Module module, Wingpanel.IndicatorManager.ServerType server_type) {

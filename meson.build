@@ -1,9 +1,10 @@
 project(
     'clipboard-indicator',
     'vala', 'c',
-    version: '1.0.0'
+    version: '1.1.0'
 )
 
+gnome = import('gnome')
 gettext_name = meson.project_name()
 i18n = import('i18n')
 
@@ -23,6 +24,8 @@ config_file = configure_file(
     configuration: config_data
 )
 
-# subdir('data')
+subdir('data')
 # subdir('po')
 subdir('src')
+
+gnome.post_install(glib_compile_schemas: true)

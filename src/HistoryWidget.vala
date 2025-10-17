@@ -42,7 +42,7 @@ public class Clipboard.HistoryWidget : Gtk.Box {
     // No notifications from clipboard? So poll it periodically for new text
     public void wait_for_text () {
         var clipboard = Gtk.Clipboard.get_default (Gdk.Display.get_default ());
-        wait_timeout = Timeout.add_full (Priority.LOW, 500, () => {
+        wait_timeout = Timeout.add_full (Priority.LOW, 1000, () => {
             if (clipboard.wait_is_text_available ()) {
                 clipboard.request_text ((cb, text) => {
                     if (text != last_text && !clipboard_text_set.contains (text)) {
